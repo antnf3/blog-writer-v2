@@ -1,0 +1,42 @@
+{
+  "name": "blog-writer-v2",
+  "version": "1.0.0",
+  "main": "index.js",
+  "files": [
+    "lib/**/*"
+  ],
+  "types": "lib/index.d.ts",
+  "description": "auto blog write",
+  "author": "antnf3 <antnf3@gmail.com>",
+  "keyword": [
+    "naver",
+    "blog",
+    "write",
+    "auto"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/antnf3/blog-writer-v2.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "scripts": {
+    "start": "tsc && node dist/index.js",
+    "build": "tsc",
+    "dev": "ts-node src/index.ts"
+  },
+  "devDependencies": {
+    "@types/dotenv": "^8.2.0",
+    "@types/node": "^14.14.8",
+    "@types/puppeteer": "^2.0.0",
+    "dotenv": "^8.2.0",
+    "ts-node": "^9.0.0",
+    "typescript": "^4.0.5"
+  },
+  "dependencies": {
+    "clipboardy": "^2.3.0",
+    "puppeteer": "^5.5.0"
+  }
+}

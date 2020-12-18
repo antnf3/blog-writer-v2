@@ -1,0 +1,12 @@
+node_modules/
+dist
+.env
+usrData
+# ignore files in capture_img folder
+capture_img/*
+# but please keep the folder
+!*.gitkeep
+.npmrc
+lib/
+dist/
+.catch/

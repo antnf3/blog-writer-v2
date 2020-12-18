@@ -1,0 +1,16 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "target": "ES5",
+        "sourceMap": true,
+        "resolveJsonModule": true,
+        "removeComments": true,
+        "declaration": true,
+        "moduleResolution": "node",
+        "outDir": "./lib",
+        "strict": true,
+        "typeRoots": ["node_modules/@types", "src/@types"]
+    },
+    "include": ["src/**/*"],
+    "exclude": ["node_modules", "lib"]
+}
