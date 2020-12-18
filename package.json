@@ -1,5 +1,5 @@
 {
-  "name": "blog-writer-v2",
+  "name": "@antnf3/blog-writer-v2",
   "version": "1.0.1",
   "main": "index.js",
   "files": [
