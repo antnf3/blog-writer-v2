@@ -91,6 +91,7 @@ async function writeNaverPost(obj: WriteNaverPostProps) {
     if (browser) {
       await browser.close();
     }
+    throw err;
   }
 }
 
