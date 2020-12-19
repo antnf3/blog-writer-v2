@@ -13,7 +13,7 @@ async function getBrowser(id: string): Promise<puppeteer.Browser> {
   const options = {
     devtools: false,
     headless: false,
-    userDataDir: `usrData/${id}`,
+    userDataDir: `usrdata/${id}`,
     defaultViewport: { width: 1920, height: 1080 },
     args: ["--start-maximized"],
   };
@@ -79,7 +79,7 @@ function getRandom(milliseconds?: number): number {
   if (random < 1000) {
     random = random + 1000;
   }
-  return random + milliseconds;
+  return random + milliseconds + 2000;
 }
 
 /**

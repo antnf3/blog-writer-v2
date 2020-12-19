@@ -2,6 +2,7 @@ node_modules/
 dist
 .env
 usrData
+usrdata
 # ignore files in capture_img folder
 capture_img/*
 # but please keep the folder
