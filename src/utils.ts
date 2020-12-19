@@ -225,9 +225,10 @@ async function uploadMultiImages(
   try {
     for (let i = 0; i < imgUrl.length; i++) {
       await clickElement(page, NAVER.ATTACH_FILE_BTN_ELE); // 사진 업로드 버튼 클릭
-      await page.waitForTimeout(getRandom());
+      await page.waitForTimeout(getRandom(2000));
 
       const fileUploadPage = await moveLastTab(browser); // 파일업로드 팝업 page
+      await fileUploadPage.waitForTimeout(getRandom(2000));
       // await fileUploadPage.waitForTimeout(getRandom());
       const isNotHidden = await fileUploadPage.$eval(
         NAVER.NEXT_VIEW_BTN_SEL,
