@@ -79,7 +79,7 @@ function getRandom(milliseconds?: number): number {
   if (random < 1000) {
     random = random + 1000;
   }
-  return random + milliseconds + 2000;
+  return random + milliseconds;
 }
 
 /**
@@ -152,8 +152,10 @@ async function clickElement(
   eleId: string
 ): Promise<void> {
   try {
-    const arrElement = await page.$x(eleId);
-    await arrElement[0].click();
+    // const arrElement = await page.$x(eleId);
+    // await arrElement[0].click();
+    const element = await page.waitForXPath(eleId);
+    await element.click();
     await page.waitForTimeout(getRandom());
   } catch (err) {
     console.log(err);
