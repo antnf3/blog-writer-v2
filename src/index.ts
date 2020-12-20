@@ -41,6 +41,7 @@ async function writeNaverPost(obj: WriteNaverPostProps) {
   try {
     browser = await getBrowser(obj.id);
     const page = await getPage(browser);
+    page.setDefaultNavigationTimeout(0); // Configure the navigation timeout
     await naverLogin(page, obj.id, obj.password); // 네이버 로그인
     await clickElement(page, NAVER.BLOG_TAB_BTN_ELE); // 블로그 탭 클릭
     await clickElement(page, NAVER.WRITE_BTN_ELE); // 글쓰기 버튼 클릭
