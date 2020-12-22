@@ -246,7 +246,7 @@ async function uploadMultiImages(
       const inputUploadHandle = await fileUploadPage.$(NAVER.IMG_FILE_TAG_ELE);
       inputUploadHandle && (await inputUploadHandle.uploadFile(imgUrl[i])); // 첨부파일 이미지 선택
 
-      await fileUploadPage.waitForTimeout(getRandom(3000));
+      await fileUploadPage.waitForTimeout(getRandom(4000));
       await clickElement(fileUploadPage, NAVER.IMG_UPLOAD_BTN_ELE); // 업로드버튼 클릭
 
       await clickElement(page, NAVER.EDIT_HTML_BTN_ELE); // html 입력창으로 이동
